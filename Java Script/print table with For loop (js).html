@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+
+    
+     <h1>print table with for loop</h1>
+
+     <form onsubmit="printTable(); return false" >
+
+         <label for="numberInput">Enter a number:-</label>
+         <input type="number" id="numberInput" name="input"  placeholder="Enter your number">
+         <button type="submit">Enter</button>
+
+     </form> 
+
+     <div id="result"></div>
+
+     <script>
+
+        function printTable(){
+
+            let input = document.querySelector("#numberInput").value;
+
+
+            for( let i = 0; i < 10; i++){
+                document.querySelector("#result")
+                     .innerHTML  += `<h2> ${input} x ${i+1} = ${(i+1)*input}  </h2>`;
+
+            }
+
+        }
+        
+        // for( let i=0; i<10 ; i++){ 
+        //     document.write(`2 x ${i+1} = ${(i+1)*2} <br>`);
+        // }
+    </script>
+</body>
+</html>
